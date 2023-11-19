@@ -11,17 +11,17 @@ public class OrderItem {
     private  OrderItemPK id = new OrderItemPK();
 
     private Integer quantity;
-    private Double preco;
+    private Double price;
 
     public OrderItem(){
 
     }
 
-    public OrderItem(Order order, Product product, Integer quantity, Double preco) {
+    public OrderItem(Order order, Product product, Integer quantity, Double price) {
         id.setOrder(order);
         id.setProduct(product);
         this.quantity = quantity;
-        this.preco = preco;
+        this.price = price;
     }
 
     public Order getOrder() {
@@ -49,10 +49,10 @@ public class OrderItem {
     }
 
     public Double getPreco() {
-        return preco;
+        return price;
     }
 
     public void setPreco(Double preco) {
-        this.preco = preco;
+        this.price = preco;
     }
 }
